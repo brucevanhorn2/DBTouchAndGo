@@ -1,19 +1,100 @@
   <!DOCTYPE html>
   <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/local.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+  <body>
+    <div class="container" id="content">
+      <h1>Database Touch-and-Go</h1>
 
-    <body>
-      <h1>Database Touch and Go</h1>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
+      <ul class="collapsible popout collapsible-accordion" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            <img style="height: 32px; width: 32px; vertical-align: middle;"
+            alt="a flask with some code in it" src="/img/why_do_it.svg"/>
+            <span class="sectionLabel">Why do it?</span>
+          </div>
+          <div class="collapsible-body">
+            <p>Pilots use an exercise called "Touch and Go" to practice landings.  In this exercise, the pilot takes off, circles the airport, then lands, then immediately takes off again, and repeats the exercise.  Every pilot knows how to land, but you have to practice the skills in order to never forget your skills in those crucial times when it really matters.</p>
+
+            <p>Here, I present a practice exercise to help you master the essential skills needed to work with the MySQL database from the command prompt.  This isn't a tutorial - I expect you to already know what all the commands do, and why you'd use them.  It's an exercise you can perform over and over to practice and acheive mastery of the important processes involved to creating and working with a MySQL database.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <img style="height: 32px; width: 32px; vertical-align: middle;"
+            alt="a flask with some code in it" src="/img/wysk.svg"/>
+            <span class="sectionLabel">What should I already know?</span>
+          </div>
+          <div class="collapsible-body"><h4>In order to be successful, you should:</h4>
+            <ul>
+              <li>Understand how to use the command line on your computer</li>
+              <li>Understand basic SQL data definition language (DDL) commands like create database and create table</li>
+              <li>Understand basic SQL data manipulation commands (DML) commands like select, insert, update, and delete</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <img style="height: 32px; width: 32px; vertical-align: middle;"
+            alt="a flask with some code in it" src="/img/checklist.svg"/>
+            <span class="sectionLabel">What do I need?</span>
+          </div>
+          <div class="collapsible-body"><h4>To work with MySQL, you need:</h4>
+            <ul>
+              <li>The mysql client installed on your computer</li>
+              <li>The mysql command configured in your path such that it can be run from any folder</li>
+              <li>Have root access to a working non-production mysql database server including knowing the address, user name, and password.  Many developers install MySQL on their development computer and access it via localhost, which is fine for this exercise.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <img style="height: 32px; width: 32px; vertical-align: middle;"
+            alt="a flask with some code in it" src="/img/steps_to_goal.svg"/>
+            <span class="sectionLabel">How do I do it?</span>
+          </div>
+          <div class="collapsible-body">
+
+            <div class="card">
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a href="#test4">Test 1</a></li>
+                  <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+                  <li class="tab"><a href="#test6">Test 3</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="test4">Test 1</div>
+                <div id="test5">Test 2</div>
+                <div id="test6">Test 3</div>
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <img style="height: 32px; width: 32px; vertical-align: middle;"
+            alt="a flask with some code in it" src="/img/where_to_next.svg"/>
+            <span class="sectionLabel">What should I learn next?</span>
+          </div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
   </html>

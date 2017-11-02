@@ -134,39 +134,167 @@
                           <pre>use TouchAndGo;</pre>
                         </div>
                       </td>
-                      <tr>
-                        <td><a class="btn btn-floating">7</a></td>
-                        <td>
-                          <div>
-                            <p>Check to see what tables exist in the database.</p>
-                            <pre>show tables;</pre>
-                          </div>
-                        </td>
+                    </tr>
+                    <tr>
+                      <td><a class="btn btn-floating">7</a></td>
+                      <td>
+
+                        <p>Check to see what tables exist in the database.</p>
+                        <pre>show tables;</pre>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a class="btn btn-floating">8</a></td>
+                      <td>
+
+                       <p>Create a table with an auto incrementing primary key field called ID.</p>
+                       <pre>create table planes;</pre>
 
 
-                      </tr>
-                    </table>
-                  </div>
-                  <div id="just-the-code">
+                     </td>
+                   </tr>
 
-                  </div>
-                </div>
+                   <tr>
+                    <td><a class="btn btn-floating">9</a></td>
+                    <td>
+
+                      <p>Verify the table was created using show tables again.</p>
+                      <pre>show tables;</pre>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">10</a></td>
+                    <td>
+                      <p>Insert some data into the table.</p>
+                      <pre>insert into planes...;</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">11</a></td>
+                    <td>
+                      <p>Verify your insert by select all records in the table.</p>
+                      <pre>select * from planes;</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">12</a></td>
+                    <td>
+                      <p>Insert a few more records.</p>
+                      <pre>record 1;</pre>
+                      <pre>record 1;</pre>
+                      <pre>record 1;</pre>
+                      <pre>record 1;</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">13</a></td>
+                    <td>
+                      <p>Verify your inserts by select all records in the table.</p>
+                      <pre>select * from planes;</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">14</a></td>
+                    <td>
+                      <p>Update the record with the ID of 3</p>
+                      <pre>Update...;</pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">15</a></td>
+                    <td>
+                      <div>
+                        <p>Verify your update by selecting just the record with the ID you updated.</p>
+                        <pre>select * from planes where id = ;</pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">16</a></td>
+                    <td>
+                      <div>
+                        <p>Select the count of all the records in the table.</p>
+                        <pre>select count(*) as total_planes from planes;</pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">17</a></td>
+                    <td>
+                      <div>
+                        <p>Delete the record with an ID equal to .</p>
+                        <pre>delete from planes where id = </pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">18</a></td>
+                    <td>
+                      <div>
+                        <p>Verify the delete by selecting the count again.  There should be one fewer.</p>
+                        <pre>select count(*) as total_planes from planes;</pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">19</a></td>
+                    <td>
+                      <div>
+                        <p>We're done!  Let's clean up.  Drop the database.</p>
+                        <pre>drop database TouchAndGo;</pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">20</a></td>
+                    <td>
+                      <div>
+                        <p>Exit the mysql prompt.</p>
+                        <pre>exit;</pre>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a class="btn btn-floating">21</a></td>
+                    <td>
+                      <div>
+                        <p>Repeat the exercise until you can do it without reading the list of steps.</p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
               </div>
+              <div id="just-the-code">
 
+              </div>
             </div>
-          </li>
-          <li>
-            <div class="collapsible-header">
-              <img style="height: 32px; width: 32px; vertical-align: middle;"
-              alt="a flask with some code in it" src="/img/where_to_next.svg"/>
-              <span class="sectionLabel">What should I learn next?</span>
-            </div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
-        </ul>
-      </div>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-    </html>
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <img style="height: 32px; width: 32px; vertical-align: middle;"
+          alt="a flask with some code in it" src="/img/where_to_next.svg"/>
+          <span class="sectionLabel">What should I learn next?</span>
+        </div>
+        <div class="collapsible-body">
+          <h5>Once you've mastered this exercise, you should:</h5>
+          <ul>
+            <li>Learn more advanced sql commands operating on a single table.</li>
+            <li>Learn to use inner join to join two or more tables</li>
+            <li>Learn summarizing queries using count, average, and sum functions</li>
+            <li>Learn to use group by and having clauses</li>
+            <li>Learn to substitute some default value in place of null if a field value is null</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

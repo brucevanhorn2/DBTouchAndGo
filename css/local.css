@@ -34,3 +34,9 @@ pre {
 	overflow: visible;
 	overflow-x: auto;
 	}
+
+video {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

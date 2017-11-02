@@ -8,7 +8,7 @@ I created this to help my bootcamp students practice a set of critical skills fo
 
 Why not use workbench?  Because much of the time the only access you have to the database is via an SSH session which precludes using a GUI.  But even if you can use a GUI, working in the command window is very fast and effective, and it's a critical skill.
 
-Don't get me wrong - I use a GUI for creating tables, especially those with foreign key relationships.  But the majority of my database work is hacking commands.
+Don't get me wrong - I use a GUI for creating tables, especially those with foreign key relationships.  But the majority of my database work is hacking commands, so I encourage my students to learn how to do this.
 
 This was put together fairly quickly, and I'm sure it's not perfect, but I think it's good enough to benefit you if you need a practice exercise.
 

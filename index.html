@@ -6,6 +6,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/local.css"  media="screen,projection"/>
+    <link rel="import" href="lock-step.html">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -65,36 +66,107 @@
 
             <div class="card">
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                <p>Everyone learns a little differently.  Below you can select a presentation that you find most effective for you.</p>
               </div>
               <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a href="#test4">Test 1</a></li>
-                  <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-                  <li class="tab"><a href="#test6">Test 3</a></li>
+                  <li class="tab"><a class="active" href="#video">Video</a></li>
+                  <li class="tab"><a href="#lock-step">Lock-Step Process</a></li>
+                  <li class="tab"><a href="#just-the-code">Just the Code</a></li>
                 </ul>
               </div>
               <div class="card-content grey lighten-4">
-                <div id="test4">Test 1</div>
-                <div id="test5">Test 2</div>
-                <div id="test6">Test 3</div>
-              </div>
-            </div>
+                <div id="video">
+                  <p>Please note this video does not have sound.</p>
+                  <video class="responsive-video" controls>
+                    <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div id="lock-step">
+                    <table class="stepList">
+                      <tr>
+                        <td><a class="btn btn-floating">1</a></td>
+                        <td>
+                          Open your command prompt.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a class="btn btn-floating">2</a></td>
+                        <td>
+                          <p>Connect to the MySQL Database</p>
+                          <pre>mysql -u root -h localhost -p</pre>
+                          <p>Substitute the user name and host address if necessary.</p>
+                        </td>
+                      </tr>
 
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">
-            <img style="height: 32px; width: 32px; vertical-align: middle;"
-            alt="a flask with some code in it" src="/img/where_to_next.svg"/>
-            <span class="sectionLabel">What should I learn next?</span>
-          </div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>
-    </div>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
-  </html>
+                      <tr>
+                        <td><a class="btn btn-floating">3</a></td>
+                        <td>
+                          <div>
+                            <p>Show all available databases.</p>
+                            <pre>show databases;</pre>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a class="btn btn-floating">4</a></td>
+                        <td>
+                          <div>
+                            <p>Create a new database.</p>
+                            <pre>create database TouchAndGo;</pre>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                       <td><a class="btn btn-floating">5</a></td>
+                       <td>
+                        <div>
+                          <p>Verify creation by running show databases again.</p>
+                          <pre>show databases;</pre>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a class="btn btn-floating">6</a></td>
+                      <td>
+                        <div>
+                          <p>Use the TouchAndGo database.</p>
+                          <pre>use TouchAndGo;</pre>
+                        </div>
+                      </td>
+                      <tr>
+                        <td><a class="btn btn-floating">7</a></td>
+                        <td>
+                          <div>
+                            <p>Check to see what tables exist in the database.</p>
+                            <pre>show tables;</pre>
+                          </div>
+                        </td>
+
+
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="just-the-code">
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <img style="height: 32px; width: 32px; vertical-align: middle;"
+              alt="a flask with some code in it" src="/img/where_to_next.svg"/>
+              <span class="sectionLabel">What should I learn next?</span>
+            </div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+        </ul>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+    </html>

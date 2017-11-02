@@ -24,7 +24,7 @@
             <span class="sectionLabel">Why do it?</span>
           </div>
           <div class="collapsible-body">
-            <p>Pilots use an exercise called "Touch and Go" to practice landings.  In this exercise, the pilot takes off, circles the airport, then lands, then immediately takes off again, and repeats the exercise.  Every pilot knows how to land, but you have to practice the skills in order to never forget your skills in those crucial times when it really matters.</p>
+            <p>Pilots use an exercise called "Touch and Go" to practice landings.  The pilot takes off, circles the airport, then lands, then immediately takes off again, sometimes with the wheels only briefly touching the ground.  The pilot then repeats the takeoff and landing cycle, sometimes for hours at a time.  Every pilot knows how to land, but you have to practice the skills in order to never forget your skills in those crucial times when it really matters.</p>
 
             <p>Here, I present a practice exercise to help you master the essential skills needed to work with the MySQL database from the command prompt.  This isn't a tutorial - I expect you to already know what all the commands do, and why you'd use them.  It's an exercise you can perform over and over to practice and acheive mastery of the important processes involved to creating and working with a MySQL database.</p>
           </div>
@@ -80,7 +80,7 @@
                 <div id="video">
                   <p>Please note this video does not have sound.</p>
                   <video class="responsive-video" controls>
-                    <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                    <source src="/video/mysql-touch-and-go-no-slides.mp4" type="video/mp4">
                     </video>
                   </div>
                   <div id="lock-step">
@@ -150,8 +150,7 @@
                       <td>
 
                        <p>Create a table with an auto incrementing primary key field called ID.</p>
-                       <pre>
-                         create table planes(
+                       <pre>create table planes(
   plane_id int not null AUTO_INCREMENT,
   tail_number varchar(255),
   make varchar(255),
@@ -178,10 +177,7 @@
                     <td><a class="btn btn-floating">10</a></td>
                     <td>
                       <p>Insert some data into the table.</p>
-                      <pre>
-                        insert into planes (tail_number, make, model, model_year) values ('ABC12356', 'Beechcraft', 'Bonanza', 1975);
-
-                      </pre>
+                      <pre>insert into planes (tail_number, make, model, model_year) values ('ABC12356', 'Beechcraft', 'Bonanza', 1975);</pre>
                     </td>
                   </tr>
                   <tr>
@@ -194,7 +190,7 @@
                   <tr>
                     <td><a class="btn btn-floating">12</a></td>
                     <td>
-                      <p>Insert a few more records.</p>
+                      <p>Insert a few more records.  Don't forget you can use the up arrow on your keyboard to bring back earlier commands, and then just edit them.</p>
 
                       <pre>insert into planes (tail_number, make, model, model_year) values ('DEF12356', 'Bombardier', 'Learjet 60 XR', 2012);</pre>
                       <pre>into planes (tail_number, make, model, model_year) values ('GHI12356', 'Lockheed Martin', 'XR-71 Blackbird', 1969);</pre>

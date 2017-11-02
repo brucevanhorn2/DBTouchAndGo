@@ -1,6 +1,7 @@
   <!DOCTYPE html>
   <html>
   <head>
+    <title>Database Touch &amp Go</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -13,8 +14,8 @@
 
   <body>
     <div class="container" id="content">
-      <h1>Database Touch-and-Go</h1>
-
+      <h3>Database Touch & Go</h1>
+        <p>In this touch and go, we'll practice connecting to and working with a very simple MySQL database.</p>
       <ul class="collapsible popout collapsible-accordion" data-collapsible="accordion">
         <li>
           <div class="collapsible-header">
@@ -149,7 +150,16 @@
                       <td>
 
                        <p>Create a table with an auto incrementing primary key field called ID.</p>
-                       <pre>create table planes;</pre>
+                       <pre>
+                         create table planes(
+  plane_id int not null AUTO_INCREMENT,
+  tail_number varchar(255),
+  make varchar(255),
+  model varchar(255),
+  model_year INT,
+  primary key (plane_id)
+);
+                       </pre>
 
 
                      </td>
@@ -168,7 +178,10 @@
                     <td><a class="btn btn-floating">10</a></td>
                     <td>
                       <p>Insert some data into the table.</p>
-                      <pre>insert into planes...;</pre>
+                      <pre>
+                        insert into planes (tail_number, make, model, model_year) values ('ABC12356', 'Beechcraft', 'Bonanza', 1975);
+
+                      </pre>
                     </td>
                   </tr>
                   <tr>
@@ -182,10 +195,11 @@
                     <td><a class="btn btn-floating">12</a></td>
                     <td>
                       <p>Insert a few more records.</p>
-                      <pre>record 1;</pre>
-                      <pre>record 1;</pre>
-                      <pre>record 1;</pre>
-                      <pre>record 1;</pre>
+
+                      <pre>insert into planes (tail_number, make, model, model_year) values ('DEF12356', 'Bombardier', 'Learjet 60 XR', 2012);</pre>
+                      <pre>into planes (tail_number, make, model, model_year) values ('GHI12356', 'Lockheed Martin', 'XR-71 Blackbird', 1969);</pre>
+                      <pre>insert into planes (tail_number, make, model, model_year) values ('DEF12356', 'Bombardier', 'Learjet 60 XR', 2012);</pre>
+                      <pre>insert into planes (tail_number, make, model, model_year) values ('GHI12356', 'Cessna', 'Lattitude', 2017);</pre>
                     </td>
                   </tr>
                   <tr>
@@ -199,7 +213,7 @@
                     <td><a class="btn btn-floating">14</a></td>
                     <td>
                       <p>Update the record with the ID of 3</p>
-                      <pre>Update...;</pre>
+                      <pre>update planes set tail_number = 'XYZ3456' where plane_id = 3;</pre>
                     </td>
                   </tr>
                   <tr>
@@ -207,7 +221,7 @@
                     <td>
                       <div>
                         <p>Verify your update by selecting just the record with the ID you updated.</p>
-                        <pre>select * from planes where id = ;</pre>
+                        <pre>select * from planes where plane_id = 3;</pre>
                       </div>
                     </td>
                   </tr>
@@ -225,7 +239,7 @@
                     <td>
                       <div>
                         <p>Delete the record with an ID equal to .</p>
-                        <pre>delete from planes where id = </pre>
+                        <pre>delete from planes where plane_id = 2;</pre>
                       </div>
                     </td>
                   </tr>
@@ -267,7 +281,43 @@
                 </table>
               </div>
               <div id="just-the-code">
+                  <pre>
+create database TouchAndGo;
 
+use TouchAndGo;
+
+create table planes(
+  plane_id int not null AUTO_INCREMENT,
+  tail_number varchar(255),
+  make varchar(255),
+  model varchar(255),
+  model_year INT,
+  primary key (plane_id)
+);
+
+insert into planes (tail_number, make, model, model_year) values ('ABC12356', 'Beechcraft', 'Bonanza', 1975);
+
+select * from planes;
+
+insert into planes (tail_number, make, model, model_year) values ('DEF12356', 'Bombardier', 'Learjet 60 XR', 2012);
+insert into planes (tail_number, make, model, model_year) values ('GHI12356', 'Lockheed Martin', 'XR-71 Blackbird', 1969);
+insert into planes (tail_number, make, model, model_year) values ('DEF12356', 'Bombardier', 'Learjet 60 XR', 2012);
+insert into planes (tail_number, make, model, model_year) values ('GHI12356', 'Cessna', 'Lattitude', 2017);
+
+select * from planes;
+
+update planes set tail_number = 'XYZ3456' where plane_id = 3;
+
+select * from planes where plane_id = 3;
+
+select count(*) as total_planes from planes;
+
+delete from planes where plane_id = 2;
+
+select count(*) as total_planes from planes;
+
+drop database TouchAndGo;
+                  </pre>
               </div>
             </div>
           </div>
